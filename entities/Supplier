@@ -1,0 +1,51 @@
+{
+  "name": "Supplier",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Supplier company name"
+    },
+    "contact_name": {
+      "type": "string",
+      "description": "Primary contact name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone"
+    },
+    "address": {
+      "type": "string",
+      "description": "Supplier address"
+    },
+    "website": {
+      "type": "string",
+      "description": "Supplier website"
+    },
+    "account_number": {
+      "type": "string",
+      "description": "Trade account number"
+    },
+    "discount_percentage": {
+      "type": "number",
+      "default": 0,
+      "description": "Trade discount percentage"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether supplier is active"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

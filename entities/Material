@@ -1,0 +1,89 @@
+{
+  "name": "Material",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Tile/material name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ceramic",
+        "porcelain",
+        "natural_stone",
+        "mosaic",
+        "vinyl"
+      ],
+      "description": "Tile type"
+    },
+    "size_width": {
+      "type": "number",
+      "description": "Tile width in mm"
+    },
+    "size_height": {
+      "type": "number",
+      "description": "Tile height in mm"
+    },
+    "size_display": {
+      "type": "string",
+      "description": "Display size (e.g., 600x600mm)"
+    },
+    "tiles_per_box": {
+      "type": "number",
+      "description": "Number of tiles per box"
+    },
+    "coverage_per_box": {
+      "type": "number",
+      "description": "Square metres per box"
+    },
+    "price_per_box": {
+      "type": "number",
+      "description": "Price per box"
+    },
+    "supplier_id": {
+      "type": "string",
+      "description": "Supplier reference ID"
+    },
+    "supplier_name": {
+      "type": "string",
+      "description": "Supplier name"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Product SKU/code"
+    },
+    "color": {
+      "type": "string",
+      "description": "Tile color"
+    },
+    "finish": {
+      "type": "string",
+      "enum": [
+        "matt",
+        "gloss",
+        "satin",
+        "textured",
+        "polished"
+      ],
+      "description": "Tile finish"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image URL"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether material is available"
+    }
+  },
+  "required": [
+    "name",
+    "size_width",
+    "size_height",
+    "tiles_per_box",
+    "coverage_per_box",
+    "price_per_box"
+  ]
+}

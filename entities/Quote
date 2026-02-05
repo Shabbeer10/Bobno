@@ -1,0 +1,172 @@
+{
+  "name": "Quote",
+  "type": "object",
+  "properties": {
+    "quote_number": {
+      "type": "string",
+      "description": "Unique quote reference number"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Client/customer name"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "Client email address"
+    },
+    "client_phone": {
+      "type": "string",
+      "description": "Client phone number"
+    },
+    "client_address": {
+      "type": "string",
+      "description": "Job site address"
+    },
+    "project_name": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "rooms": {
+      "type": "array",
+      "description": "List of rooms to tile",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "length": {
+            "type": "number"
+          },
+          "width": {
+            "type": "number"
+          },
+          "square_metres": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "tile_id": {
+      "type": "string",
+      "description": "Selected tile material ID"
+    },
+    "tile_name": {
+      "type": "string",
+      "description": "Tile name for display"
+    },
+    "tile_size": {
+      "type": "string",
+      "description": "Tile dimensions"
+    },
+    "tiles_per_box": {
+      "type": "number",
+      "description": "Number of tiles per box"
+    },
+    "coverage_per_box": {
+      "type": "number",
+      "description": "Square metres per box"
+    },
+    "price_per_box": {
+      "type": "number",
+      "description": "Price per box of tiles"
+    },
+    "waste_percentage": {
+      "type": "number",
+      "default": 10,
+      "description": "Waste percentage for cuts and breakage"
+    },
+    "total_square_metres": {
+      "type": "number",
+      "description": "Total area to tile"
+    },
+    "boxes_required": {
+      "type": "number",
+      "description": "Number of boxes needed"
+    },
+    "material_cost": {
+      "type": "number",
+      "description": "Total material cost"
+    },
+    "labor_rate_type": {
+      "type": "string",
+      "enum": [
+        "per_sqm",
+        "fixed"
+      ],
+      "default": "per_sqm",
+      "description": "Labor rate calculation type"
+    },
+    "labor_rate": {
+      "type": "number",
+      "description": "Labor rate (per sqm or fixed)"
+    },
+    "labor_cost": {
+      "type": "number",
+      "description": "Total labor cost"
+    },
+    "additional_items": {
+      "type": "array",
+      "description": "Additional line items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Subtotal before VAT"
+    },
+    "vat_rate": {
+      "type": "number",
+      "default": 20,
+      "description": "VAT percentage"
+    },
+    "vat_amount": {
+      "type": "number",
+      "description": "VAT amount"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total quote amount"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "sent",
+        "accepted",
+        "rejected",
+        "expired"
+      ],
+      "default": "draft",
+      "description": "Quote status"
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date",
+      "description": "Quote validity date"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  },
+  "required": [
+    "client_name",
+    "project_name"
+  ]
+}
